@@ -1,0 +1,34 @@
+{
+  "name": "recipe-book-django",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently --kill-others-on-fail -n vite,django -c cyan,green \"pnpm dev:vite\" \".venv/bin/python manage.py runserver 127.0.0.1:8000\"",
+    "dev:vite": "vite",
+    "build": "vite build",
+    "typecheck": "tsc --noEmit"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.11.2",
+      "onFail": "download"
+    }
+  },
+  "dependencies": {
+    "@inertiajs/react": "^2.2.19",
+    "@tailwindcss/vite": "^4.3.2",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "tailwindcss": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.3",
+    "concurrently": "^10.0.6",
+    "typescript": "^5.9.3",
+    "vite": "^8.1.3"
+  }
+}

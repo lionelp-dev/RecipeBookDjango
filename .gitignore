@@ -1,0 +1,36 @@
+# Frontend dependencies and generated assets
+node_modules/
+dist/*
+!dist/.gitkeep
+.vite/
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python environments, bytecode and tooling caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Django local runtime files
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+*.log
+
+# Local configuration and editor files
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
