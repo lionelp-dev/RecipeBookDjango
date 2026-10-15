@@ -1,11 +1,11 @@
-type HomeProps = {
-  message: string;
-};
+import { RecipeHomeLayout } from "../features/recipes/components/RecipeHomeLayout";
+import { RecipeHomeProvider } from "../features/recipes/context/RecipeHomeContext";
+import type { RecipeHomeProps } from "../features/recipes/types";
 
-export default function Home({ message }: HomeProps) {
+export default function Home(props: RecipeHomeProps) {
   return (
-    <main className="grid min-h-screen place-items-center bg-slate-950 p-6 text-white">
-      <h1 className="text-4xl font-bold">{message}</h1>
-    </main>
+    <RecipeHomeProvider initialData={props}>
+      <RecipeHomeLayout />
+    </RecipeHomeProvider>
   );
 }
